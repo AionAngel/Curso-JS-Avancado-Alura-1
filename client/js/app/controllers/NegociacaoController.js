@@ -2,15 +2,20 @@ class NegociacaoController {
     
     constructor() {
         
+        //Pegou as tags da form na View
         let $ = document.querySelector.bind(document);
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
+
+        //Criou um parametro da lista de negociações vindo do Model
         this._listaNegociacoes = new ListaNegociacoes();
         
+        //Pegou o lugar na View para inserir e atualizar a tabela
         this._negociacoesView = new NegociacoesView($('#negociacoesView'));
         this._negociacoesView.update(this._listaNegociacoes);
         
+        //Pegou lugar na View para inserir mensagem e atualizar mensagem
         this._mensagem = new Mensagem();
         this._mensagemView = new MensagemView($('#mensagemView'));
         this._mensagemView.update(this._mensagem);

@@ -1,3 +1,4 @@
+
 class Negociacao {
     
     constructor(data, quantidade, valor) {
